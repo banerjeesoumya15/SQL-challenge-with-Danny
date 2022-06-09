@@ -22,3 +22,10 @@ FROM dannys_diner.sales
 GROUP BY customer_id) s1 
 INNER JOIN dannys_diner.sales s2 ON s1.customer_id=s2.customer_id AND s1.first_order=s2.order_date
 ;
+
+-- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+SELECT TOP 1 product_id, COUNT(*) AS count_sales
+FROM dannys_diner.sales
+GROUP BY product_id
+ORDER BY 2 DESC
+;
