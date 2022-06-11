@@ -41,12 +41,12 @@ VALUES
   ('3', 'ramen', '12');
   
 
-CREATE TABLE members (
+CREATE TABLE dannys_diner.members (
   "customer_id" VARCHAR(1),
   "join_date" DATE
 );
 
-INSERT INTO members
+INSERT INTO dannys_diner.members
   ("customer_id", "join_date")
 VALUES
   ('A', '2021-01-07'),
